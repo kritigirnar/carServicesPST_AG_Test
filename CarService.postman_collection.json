@@ -1,0 +1,309 @@
+{
+	"info": {
+		"_postman_id": "45a4813b-e223-4453-be67-009bf51a866a",
+		"name": "CarService",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7432101"
+	},
+	"item": [
+		{
+			"name": "AddCarService",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"length\": 4.25,\r\n    \"weight\": 1200.0,\r\n    \"velocity\": 150.0,\r\n    \"colour\": \"White\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/cars",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cars"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "AddCarService",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"length\": 4.25,\r\n    \"weight\": 1200.0,\r\n    \"velocity\": 150.0,\r\n    \"colour\": \"White\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/cars",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cars"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 29 Jul 2024 13:32:30 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 102,\n    \"length\": 4.25,\n    \"weight\": 1200,\n    \"velocity\": 150,\n    \"colour\": \"White\"\n}"
+				}
+			]
+		},
+		{
+			"name": "UpdateCarService",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 102,\r\n    \"length\": 4.25,\r\n    \"weight\": 1200.0,\r\n    \"velocity\": 150.0,\r\n    \"colour\": \"Baby Blue\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/cars",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cars"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "UpdateCarService",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 102,\r\n    \"length\": 4.25,\r\n    \"weight\": 1200.0,\r\n    \"velocity\": 150.0,\r\n    \"colour\": \"Baby Blue\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/cars",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cars"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 29 Jul 2024 13:33:09 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 102,\n    \"length\": 4.25,\n    \"weight\": 1200,\n    \"velocity\": 150,\n    \"colour\": \"Baby Blue\"\n}"
+				}
+			]
+		},
+		{
+			"name": "SearchCarService",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/cars/search?length=4.5&weight=1200.0&velocity=150.0&colour=Pink",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cars",
+						"search"
+					],
+					"query": [
+						{
+							"key": "length",
+							"value": "4.5"
+						},
+						{
+							"key": "weight",
+							"value": "1200.0"
+						},
+						{
+							"key": "velocity",
+							"value": "150.0"
+						},
+						{
+							"key": "colour",
+							"value": "Pink"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "SearchCarService",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/cars/search?length=4.5&weight=1200.0&velocity=150.0&colour=Pink",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cars",
+								"search"
+							],
+							"query": [
+								{
+									"key": "length",
+									"value": "4.5"
+								},
+								{
+									"key": "weight",
+									"value": "1200.0"
+								},
+								{
+									"key": "velocity",
+									"value": "150.0"
+								},
+								{
+									"key": "colour",
+									"value": "Pink"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 29 Jul 2024 13:35:31 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 2,\n        \"length\": 4.5,\n        \"weight\": 1200,\n        \"velocity\": 150,\n        \"colour\": \"Pink\"\n    }\n]"
+				}
+			]
+		}
+	]
+}
